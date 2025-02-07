@@ -1,0 +1,160 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #ffffff; /* White */
+}
+
+.intro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+figure {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+    padding: 10px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #333; /* Dark background for better contrast */
+}
+
+figure:nth-child(1) figcaption {
+    background-color: #FF0000; /* Red */
+    color: #ffffff; /* White */
+}
+
+figure:nth-child(2) figcaption {
+    background-color: #FFA500; /* Orange */
+    color: #000000; /* Black */
+}
+
+figure:nth-child(3) figcaption {
+    background-color: #FFFF00; /* Yellow */
+    color: #000000; /* Black */
+}
+
+figure:nth-child(4) figcaption {
+    background-color: #008000; /* Green */
+    color: #ffffff; /* White */
+}
+
+figure:nth-child(5) figcaption {
+    background-color: #0000FF; /* Blue */
+    color: #ffffff; /* White */
+}
+
+figure:nth-child(6) figcaption {
+    background-color: #4B0082; /* Indigo */
+    color: #ffffff; /* White */
+}
+
+figure:nth-child(7) figcaption {
+    background-color: #800080; /* Purple */
+    color: #ffffff; /* White */
+}
+
+figure:nth-child(8) figcaption {
+    background-color: #FFC0CB; /* Pink */
+    color: #000000; /* Black */
+}
+
+figure:nth-child(9) figcaption {
+    background-color: #FFFFFF; /* White */
+    color: #000000; /* Black */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.center-orange, .center-pink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tablet View */
+@media (min-width: 772px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid figure {
+        border-radius: 50%;
+    }
+    .grid figure:last-child {
+        grid-column: span 2;
+    }
+}
+
+/* Large Screen View */
+@media (min-width: 992px) {
+    .grid figure {
+        border-radius: 0;
+    }
+    .grid figure:nth-child(3n) {
+        grid-column: span 2;
+    }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark Color Scheme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #f4f4f4;
+    }
+    .grid figure {
+        background-color: #444;
+        color: #ff0;
+        border-color: #000;
+    }
+    header, footer {
+        background-color: #444;
+        color: #ff0;
+    }
+    a {
+        color: #ff0;
+    }
+}
